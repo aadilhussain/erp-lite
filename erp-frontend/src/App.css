@@ -1,0 +1,123 @@
+.app-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(180deg, rgba(31, 111, 91, 0.08), transparent 260px),
+    #f6f7f4;
+}
+
+.sidebar {
+  width: 280px;
+  border-right: 1px solid #e1e5df;
+  padding: 24px 16px;
+}
+
+.brand {
+  padding: 8px 8px 20px;
+}
+
+.brand-mark {
+  background: #1f6f5b;
+  color: #fff;
+  font-weight: 800;
+}
+
+.nav-list {
+  display: grid;
+  gap: 6px;
+}
+
+.nav-list .MuiListItemButton-root {
+  border-radius: 8px;
+  gap: 12px;
+  min-height: 48px;
+}
+
+.nav-list .Mui-selected {
+  background: rgba(31, 111, 91, 0.12);
+}
+
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  background: #edf2ee;
+  color: #1f6f5b;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.main-content {
+  margin-left: 280px;
+  min-height: 100vh;
+}
+
+.topbar {
+  border-bottom: 1px solid #e1e5df;
+}
+
+.page {
+  padding: 28px;
+}
+
+.mobile-tabs {
+  display: none;
+  border-bottom: 1px solid #e1e5df;
+  background: #fff;
+}
+
+.panel,
+.stat-card,
+.table-panel {
+  border: 1px solid #e1e5df;
+  box-shadow: 0 12px 30px rgba(23, 33, 29, 0.06);
+}
+
+.panel {
+  padding: 20px;
+}
+
+.stat-card {
+  padding: 20px;
+  min-height: 150px;
+  display: grid;
+  gap: 10px;
+  align-content: space-between;
+}
+
+.accent-panel {
+  min-height: 158px;
+  background: #f4f0fa;
+}
+
+.table-panel {
+  overflow: hidden;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  background: #f3f5f1;
+  color: #3d4742;
+  font-weight: 800;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .mobile-tabs {
+    display: block;
+  }
+
+  .page {
+    padding: 18px;
+  }
+
+  .topbar .MuiToolbar-root {
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+  }
+}
