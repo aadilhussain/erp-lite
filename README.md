@@ -1,6 +1,6 @@
 # ERP Lite
 
-A lightweight ERP (Enterprise Resource Planning) application built with **React**, **Vite**, and **Material UI (MUI)** for managing users, roles, customers, products, inventory, and sales proposals.
+A lightweight ERP (Enterprise Resource Planning) application built with **React**, **Vite**, and **Material UI (MUI)**  **Laravel** and **MySQL** for managing users, roles, customers, products, inventory, and sales proposals.
 
 ## Overview
 
