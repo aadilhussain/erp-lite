@@ -256,19 +256,23 @@ npm run preview
 
 Developed using React, Vite, and Material UI as a lightweight ERP solution for sales and inventory management.
 
+
 ## Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](screenshots/Erp-Dashboard.png)
 
-### Users
-![Users](screenshots/users.png)
+### Users Management
+![Users](screenshots/Erp-Users.png)
 
 ### Roles & Permissions
-![Roles](screenshots/roles.png)
+![Roles & Permissions](screenshots/Erp-Roles-Permissions.png)
 
-### Customers
-![Customers](screenshots/customers.png)
+### Customers Management
+![Customers](screenshots/Erp-Customers.png)
 
-### Proposals
-![Proposals](screenshots/proposals.png)
+### Products Management
+![Products](screenshots/Erp-Products.png)
+
+### Proposals Management
+![Proposals](screenshots/Erp-Proposals.png)
