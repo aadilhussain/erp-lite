@@ -1,4 +1,6 @@
-import { useMemo, useState, type FormEvent, type ReactNode } from 'react'
+
+import axios from "axios";
+import { useMemo, useState, useEffect, type FormEvent, type ReactNode } from 'react'
 import {
   AppBar,
   Avatar,
@@ -193,10 +195,15 @@ function App() {
   const [activeModule, setActiveModule] = useState<ModuleKey>('dashboard')
   const [users, setUsers] = useState(initialUsers)
   const [roles, setRoles] = useState(initialRoles)
-  const [customers, setCustomers] = useState(initialCustomers)
+  const [customers, setCustomers] = useState<Customer[]>([])
   const [products, setProducts] = useState(initialProducts)
   const [proposals, setProposals] = useState(initialProposals)
-
+  useEffect(() => {
+    axios
+      .get("http://127.0.0.1:8000/api/customers")
+      .then((res) => setCustomers(res.data))
+      .catch((err) => console.error(err));
+  }, []);
   const dashboard = useMemo(() => {
     const revenue = proposals
       .filter((proposal) => proposal.status === 'Accepted')
@@ -215,9 +222,23 @@ function App() {
     setRoles([{ id: getNextId(roles), ...role }, ...roles])
   }
 
-  const addCustomer = (customer: CustomerFormState) => {
-    setCustomers([{ id: getNextId(customers), ...customer }, ...customers])
-  }
+  const addCustomer = async (customer: CustomerFormState) => {
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/api/customers",
+        customer
+      );
+
+      setCustomers([
+        response.data,
+        ...customers,
+      ]);
+
+      console.log("Customer saved");
+    } catch (error) {
+      console.error("Save failed", error);
+    }
+  };
 
   const addProduct = (product: ProductFormState) => {
     setProducts([

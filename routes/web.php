@@ -4,8 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Cache;
 use App\Models\Products;
 
-Route::get('/cache-test', function () {
-    logger('Fetching from database');
+Route::get('/api/cache-test', function () {
     $products = Cache::remember(
         'products_v1',
         3600,
@@ -14,14 +13,9 @@ Route::get('/cache-test', function () {
 
     return response()->json($products);
 });
-Route::get('/', function () {
-    return view('welcome');
-});
-// Route::get('/cache-test', function () {
 
-//     Cache::put('name', 'Aadil', 60);
-
-//     return Cache::get('name');
-// });
-
-//dd($products);
+Route::get('/{any?}', function () {
+    return response()->file(
+        public_path('frontend/index.html')
+    );
+})->where('any', '.*');
