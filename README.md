@@ -277,4 +277,3 @@ Developed using React, Vite, and Material UI as a lightweight ERP solution for s
 ### Proposals Management
 ![Proposals](screenshots/Erp-Proposals.png)
 
-
