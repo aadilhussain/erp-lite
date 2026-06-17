@@ -120,29 +120,29 @@ const initialRoles: RoleEntry[] = [
   { id: 3, role: 'Inventory', permissions: 'Products, stock updates, dashboard' },
 ]
 
-const initialCustomers: Customer[] = [
-  {
-    id: 1,
-    name: 'Aarav Sharma',
-    company: 'Northstar Retail',
-    email: 'aarav@northstar.test',
-    phone: '+91 98765 43210',
-  },
-  {
-    id: 2,
-    name: 'Meera Kapoor',
-    company: 'Urban Supply Co.',
-    email: 'meera@urban.test',
-    phone: '+91 99887 77665',
-  },
-  {
-    id: 3,
-    name: 'Rohan Shah',
-    company: 'Bluefin Services',
-    email: 'rohan@bluefin.test',
-    phone: '+91 91234 56780',
-  },
-]
+// const initialCustomers: Customer[] = [
+//   {
+//     id: 1,
+//     name: 'Aarav Sharma',
+//     company: 'Northstar Retail',
+//     email: 'aarav@northstar.test',
+//     phone: '+91 98765 43210',
+//   },
+//   {
+//     id: 2,
+//     name: 'Meera Kapoor',
+//     company: 'Urban Supply Co.',
+//     email: 'meera@urban.test',
+//     phone: '+91 99887 77665',
+//   },
+//   {
+//     id: 3,
+//     name: 'Rohan Shah',
+//     company: 'Bluefin Services',
+//     email: 'rohan@bluefin.test',
+//     phone: '+91 91234 56780',
+//   },
+// ]
 
 const initialProducts: Product[] = [
   { id: 1, name: 'Office Desk', sku: 'DESK-100', stock: 18, price: 12999, status: 'Active' },
